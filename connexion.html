@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <link rel="icon" href="img/favicon/favicon_disconnect.png" />
+    <link rel="stylesheet" type="text/css" href="css/connexion.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link href='css/animate.css' rel='stylesheet' type='text/css'>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+<!--                            div 1 - Connexion Email                            -->
+
+        <div class="div1" id="div1">
+            <p class="text fadeInDown animated">Connexion</p>
+            <p class="false fadeInDown animated" id="falseEmail"></p>
+            <input type="email" id="email" class="input fadeInDown animated" name="Email" placeholder="Email" required onkeypress="if (event.keyCode==13){ onClickLoginEmail() } capLock(event)"></input>
+            <br>
+            <br>
+            <input class="button fadeInDown animated" type="button" onclick="onClickLoginEmail()" value="SUIVANT" />
+        </div>
+
+<!--                            div 2 - Connexion Mot de passe                            -->
+
+        <div class="div2" id="div2">
+            <i class="fa fa-arrow-left arrow fadeInDown animated" aria-hidden="true" onclick="onClickUndo()"></i>
+            <div class="tooltip" id="tooltip">
+                <img class="maj fadeInDown animated" src="img/icon/maj.png" alt="majuscule">
+                <span class="tooltiptext">Touche Verr. Maj. active</span>
+            </div>
+            <p class="text fadeInDown animated">Connexion</p>
+            <img src="" alt="imageProfil" id="imageProfil" class="imageProfil fadeInDown animated ">
+            <p class="text fadeInDown animated" id="nameProfil"></p>
+            <p class="false" id="falsePassword"></p>
+            <a id="motDePasseOublier" href="motdepasseoublier.html">Mot de passe oublier ?</a>
+            </p>
+            <input pattern=".{8,}" type="password" class="input fadeInDown animated " name="password" [(ngModel)]="model.password" #password="ngModel"
+                placeholder="Mot de passe" id="password" required onkeypress="if (event.keyCode==13){ onClickLoginPassword() } capLock(event)">
+            <br>
+            <br>
+            <input class="button fadeInDown animated" type="button" onclick="onClickLoginPassword()" value="SE CONNECTER" />
+        </div>
+    </div>
+    
+    <script src="js/connexion.js"></script>
+
+</body>
+
+
+</html>
