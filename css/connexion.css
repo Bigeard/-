@@ -1,19 +1,28 @@
-html, body {
-    margin: 0;
-    width: 100%;
+html{
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+}
+
+body {
+	margin: 0;
 	font-family: sans-serif;
+	background-image: url("../img/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .container{
-	background-color: #ffffff54;
+	background-color: #fff;
 	width: 500px;
+	height: 500px;
 	text-align: center;
 	display: block;
-	height: 500px;
 	border-radius: 15px;
-	margin: 150px auto;
+	margin: 8% auto;
 	padding: 1px;
-	box-shadow: 1px 1px 12px rgb(218, 217, 217);
+	box-shadow: 1px 1px 12px rgba(218, 217, 217, 0.753);
 }
 
 .div1{
